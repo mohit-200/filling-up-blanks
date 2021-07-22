@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <title>Play With Prepositions</title>
+</head>
+
+<body>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/hrwLbcvuJHs?rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="main">
+        <h1>Fill In The Blanks</h1>
+        <br><br>
+        <div class="content">
+            <form action="#">
+                <div class="que">
+                    <h3>1. I think they teach too much <input type="text" autocomplete="off" id="first" /> in schools. <em>(running/mathematics)</em></h3>
+                    <!--too much-->
+                </div>
+                <div class="que">
+                    <h3>2. the <input type="text" autocomplete="off" id="second" /> rises in the east. <em>(sun/son)</em></h3>
+                    <!--is-->
+                </div>
+                <div class="que">
+                    <h3>3.the red fort is in <input type="text" autocomplete="off" id="third" /><em>(delhi/mumbai)</em>
+                        <!--funds-->
+                </div>
+                <div class="que">
+                    <h3>4. this zoo is famous for rare <input type="text" autocomplete="off" id="fourth" /><em>(panda/humans)</em>
+                        <!--have-->
+                </div>
+                <div class="que">
+                    <h3>5. A group of students is going to <input type="text" autocomplete="off" id="fifth" /> for seminar. <em>( auditorium/ playground)</em></h3>
+                    <!--are-->
+                </div>
+                <div class="que">
+                    <h3>6. i have a lot of
+                        <input type="text" autocomplete="off" id="sixth" />.<em>(medicines/stress/Both)</em></h3>
+                    <!--don't-->
+                </div>
+                <br>
+                <div class="button">
+                    <input type="submit" name="submit" value="Submit" onclick="check();" class="submit">
+                </div>
+            </form>
+            <div class="instructions" id="endgame" style="display:none;">
+                <h2><strong><u>Game ends</u></strong></h2>
+                <ul>Your score is: <span id="score"></span></ul>
+                <div class="submit"><a href="index.html">Main Menu</a></div>
+                <div class="submit"><a href="https://englishbolega.com/games">Play More</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check() {
+            var ans1 = document.getElementById('first').value;
+            var ans2 = document.getElementById('second').value;
+            var ans3 = document.getElementById('third').value;
+            var ans4 = document.getElementById('fourth').value;
+            var ans5 = document.getElementById('fifth').value;
+            var ans6 = document.getElementById('sixth').value;
+            var score = 0;
+            var a1 = "mathematics";
+            var a2 = "sun";
+            var a3 = "delhi";
+            var a4 = "panda ";
+            var a5 = "auditorium";
+            var a6 = "medicines";
+
+            if (ans1 == a1) {
+                score++;
+            }
+
+            if (ans2 == a2) {
+                score++;
+            }
+
+            if (ans3 == a3) {
+                score++;
+            }
+            if (ans4 == a4) {
+                score++;
+            }
+            if (ans5 == a5) {
+                score++;
+            }
+            if (ans6 == a6) {
+                score++;
+            }
+            document.getElementById('score').innerHTML = score;
+            document.getElementById('endgame').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
