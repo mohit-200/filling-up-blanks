@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <title>Play With Adverbs</title>
+</head>
+
+<body>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/pWAP7fIwGnI?rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="main">
+        <h1>Fill In The Blanks</h1>
+        <br><br>
+        <div class="content">
+            <form action="#">
+                <div class="que">
+                    <h3>1. He is getting <input type="text" autocomplete="off" id="first" /> day by day. <em>(best/better/well)</em></h3><img id="1ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--better-->
+                </div>
+                <div class="que">
+                    <h3>2. I really feel <input type="text" autocomplete="off" id="second" /> about it. <em>(badly/bad)</em></h3><img id="2ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--bad-->
+                </div>
+                <div class="que">
+                    <h3>3. The journey was <input type="text" autocomplete="off" id="third" /> uncomfortable. <em>(rather/fairly/fair)</em></h3><img id="3ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--rather-->
+                </div>
+                <div class="que">
+                    <h3>4.&nbsp;
+                        <h3>He play Hockey very <input type="text" autocomplete="off" id="fourth" />. <em>(well/good)</em></h3><img id="4ans" src="tick.png" width="40" height="30" style="display:none; ">
+                        <!--well-->
+                </div>
+                <div class="que">
+                    <h3>5. He is not <input type="text" autocomplete="off" id="fifth" /> to go to school. <em>(enough old/old enough)</em></h3><img id="5ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--old enough-->
+                </div>
+                <div class="que">
+                    <h3>6. He narrated the incident in <input type="text" autocomplete="off" id="sixth" />. <em>(detail/details)</em></h3><img id="6ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--detail-->
+                </div>
+                <br>
+                <div class="button">
+                    <input type="submit" name="submit" value="Submit" onclick="check();" class="submit">
+                </div>
+            </form>
+            <div class="instructions" id="endgame" style="display:none;">
+                <h2><strong><u>Game ends</u></strong></h2>
+                <ul>Your score is: <span id="score"></span></ul>
+                <div><a href="index.html">Main Menu</a></div>
+                <div><a href="https://englishbolega.com/games">Play More</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check() {
+            var ans1 = document.getElementById('first').value;
+            var ans2 = document.getElementById('second').value;
+            var ans3 = document.getElementById('third').value;
+            var ans4 = document.getElementById('fourth').value;
+            var ans5 = document.getElementById('fifth').value;
+            var ans6 = document.getElementById('sixth').value;
+            var score = 0;
+            var a1 = "better";
+            var a2 = "bad";
+            var a3 = "rather";
+            var a4 = " well";
+            var a5 = "old enough";
+            var a6 = "detail";
+
+            if (ans1 == a1) {
+                score++;
+                document.getElementById('1ans').style.display = "block";
+            }
+
+            if (ans2 == a2) {
+                score++;
+                document.getElementById('2ans').style.display = "block";
+            }
+
+            if (ans3 == a3) {
+                score++;
+                document.getElementById('3ans').style.display = "block";
+            }
+            if (ans4 == a4) {
+                score++;
+                document.getElementById('4ans').style.display = "block";
+            }
+            if (ans5 == a5) {
+                score++;
+                document.getElementById('5ans').style.display = "block";
+            }
+            if (ans6 == a6) {
+                score++;
+                document.getElementById('6ans').style.display = "block";
+            }
+            document.getElementById('score').innerHTML = score;
+            document.getElementById('endgame').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

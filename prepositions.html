@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <title>Play With Prepositions</title>
+</head>
+
+<body>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/iqCP-P8vSbI?rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="main">
+        <h1>Fill In The Blanks</h1>
+        <br><br>
+        <div class="content">
+            <form action="#">
+                <div class="que">
+                    <h3>1.<input type="text" autocomplete="off" id="first" />Peter and John, there were three other boys present.</h3><img id="1ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--besides-->
+                </div>
+                <div class="que">
+                    <h3>2. The child has been missing <input type="text" autocomplete="off" id="second" />yesterday.</h3><img id="2ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--since-->
+                </div>
+                <div class="que">
+                    <h3>3.She dislikes being looked <input type="text" autocomplete="off" id="third" /> .</h3><img id="3ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--at-->
+                </div>
+                <div class="que">
+                    <h3>4. An old feud existed <input type="text" autocomplete="off" id="fourth" /> the two families.</h3><img id="4ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--between-->
+                </div>
+                <div class="que">
+                    <h3>5. He traveled seventy miles <input type="text" autocomplete="off" id="fifth" />two hours.</h3><img id="5ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--in-->
+                </div>
+                <div class="que">
+                    <h3>6. I commenced work <input type="text" autocomplete="off" id="sixth" /> 1st May.</h3><img id="6ans" src="tick.png" width="40" height="30" style="display:none; ">
+                    <!--from-->
+                </div>
+                <br>
+                <div class="button">
+                    <input type="submit" name="submit" value="Submit" onclick="check();" class="submit">
+                </div>
+            </form>
+            <div class="instructions" id="endgame" style="display:none;">
+                <h2><strong><u>Game ends</u></strong></h2>
+                <ul>Your score is: <span id="score"></span></ul>
+                <div><a href="index.html">Main Menu</a></div>
+                <div><a href="https://englishbolega.com/games">Play More</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check() {
+            var ans1 = document.getElementById('first').value;
+            var ans2 = document.getElementById('second').value;
+            var ans3 = document.getElementById('third').value;
+            var ans4 = document.getElementById('fourth').value;
+            var ans5 = document.getElementById('fifth').value;
+            var ans6 = document.getElementById('sixth').value;
+            var score = 0;
+            var a1 = "besides";
+            var a2 = "since";
+            var a3 = "at";
+            var a4 = "between";
+            var a5 = "in";
+            var a6 = "from";
+
+            if (ans1 == a1) {
+                score++;
+                document.getElementById('1ans').style.display = "block";
+            }
+
+            if (ans2 == a2) {
+                score++;
+                document.getElementById('2ans').style.display = "block";
+            }
+
+            if (ans3 == a3) {
+                score++;
+                document.getElementById('3ans').style.display = "block";
+            }
+            if (ans4 == a4) {
+                score++;
+                document.getElementById('4ans').style.display = "block";
+            }
+            if (ans5 == a5) {
+                score++;
+                document.getElementById('5ans').style.display = "block";
+            }
+            if (ans6 == a6) {
+                score++;
+                document.getElementById('6ans').style.display = "block";
+            }
+            document.getElementById('score').innerHTML = score;
+            document.getElementById('endgame').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
